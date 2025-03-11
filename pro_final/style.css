@@ -1,0 +1,508 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/*-------------------------------------------------------*/
+/* Cabeçalho */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    z-index: 1000;
+    font-weight: bold;
+}
+
+/* Logo */
+.logo img {
+    max-height: 24px; /*Conforme Solicitado*/
+    position: relative;
+    top: 4px;
+    padding: 0 4px;
+}
+
+.logo span {
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #ffc800; /*Conforme Solicitado*/
+}
+
+/* Menu de navegação */
+.menu ul {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+}
+.menu ul li {
+    display: inline;
+}
+.menu ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    transition: color 0.3s;
+    
+}
+
+.menu ul li a:hover {
+    color: #ffc800;
+}
+/*-------------------------------------------------------*/
+/* 1º - Introdução */
+.introducao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffc800;
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    text-decoration: none;
+    color: #f1f1f1;
+    flex-wrap: wrap;
+}
+.texto-introducao {
+    text-align: center;
+    max-width: 500px;
+}
+.texto-introducao h1 {
+    padding: 10px;
+}
+.texto-introducao p {
+    padding: 20px;
+}
+.imagem-introducao img {
+    max-width: 100%;
+    height: auto;
+}
+.botoes {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 7PX;
+}
+
+.btn1 {
+    padding: 10px 10px;
+    text-decoration: none;
+    color: #f1f1f1;
+    background-color:rgb(86, 202, 162) ;
+    border: 0;
+    transition-property: background-color;
+    transition: 0.5s;
+}
+.btn1:hover {
+    background-color: rgb(71, 165, 134);
+}
+
+.btn2 {
+    padding: 8px 10px;
+    text-decoration: none;
+    color: #f1f1f1;
+    background-color:#ffc800;
+    border: solid;
+    border-color: #f1f1f1;
+    transition-property: background-color;
+    transition: 0.5s;
+}
+.btn2:hover {
+    background-color: #f1f1f1;
+    color: #333;
+}
+
+/*-------------------------------------------------------*/
+/* 2º - Qualidade */
+.qualidade {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.secao2 {
+    display: grid; /*Utilização de Grid - aula 6*/
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    max-width: 900px;
+    width: 90%; 
+    font-size: 0.8rem;
+    justify-content: center;
+    align-items: center;
+        
+}
+.servicos-qualidade {
+    text-align: center;
+    max-width: 300px;
+}
+
+.servicos-qualidade button {
+    padding: 10px 20px;
+    background-color: #ffc800;
+    text-decoration:none;
+    color: #333;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    transition-property: background-color;
+    transition: color;
+    transition: 0.5s;
+}
+.servicos-qualidade button:hover {
+    background-color: #333;
+    color: #beb286;
+}
+.video-qualidade video {
+    width: 100%;
+    max-width: 600px;
+}
+/*-------------------------------------------------------*/
+/* 3º - Tratamento */
+.tratamento {
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    height: 100vh;
+    gap: 10px;
+    text-align: center;
+    background-color: #ffc800;
+    padding: 20px 0;
+}
+.trat-disponivel {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.trat-disponivel h2 {
+    font-size: 2rem;
+    padding: 10px;
+}
+.trat-disponivel h3 {
+    font-size: 0.8rem;
+    color: #333;
+}
+.cards-tratamento {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 0px 20px;
+    width: 100%;
+    max-width: 1000px;
+}
+.card {
+    width: 165px; /* largura dos cards */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* sombra */
+    overflow: hidden; /* limite do card */
+    transition: transform 0.3s ease; 
+    display: flex;
+    flex-direction: column;
+}
+/*Movimenta os Cards - inicio*/
+@keyframes moverCard {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-5px);
+    }
+}
+.card:hover {
+    animation: moverCard 0.3s ease forwards;
+}
+/*Movimenta os Cards - Fim*/
+.card-imagem {
+    width: 100%; 
+    height: 50%; 
+}
+.card-imagem img {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+}
+.card-legenda {
+    width: 100%; 
+    background-color: #313131; /*Fundo dos Cards (secão 3): #313131 (Cinza escuro) - (Conforme solicitado)*/
+    color: #fff; 
+    padding: 15px;
+    text-align: center; 
+    font-weight: bold;
+}
+.card-legenda h5 {
+    margin: 10px 0;
+    font-size: 0.9rem; 
+}
+.card-legenda h6 {
+    margin: 5px 0;
+    font-size: 0.6rem; 
+    color: #dddddd; /*Texto do Card - #dddddd (Conforme solicitado)*/
+    text-align: center;
+}
+/*-------------------------------------------------------*/
+/* 4º - Veterinários */
+.veterinarios {
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    height: 100vh;
+    gap: 5px;
+    text-align: center;
+    background-color: #f1f1f1;
+    padding: 40px 20;
+}
+.nossos-veterinarios {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 30px;
+}
+.nossos-veterinarios h2 {
+    margin: 10px 0;
+    font-size: 2rem; 
+}
+.nossos-veterinarios h4 {
+    margin: 5px 0;
+    font-size: 1rem; 
+    color: #333;
+}
+.cards-veterinarios {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap; 
+    padding: 0px 20px;
+    width: 100%;
+    max-width: 1200px;
+}
+.cardsvet {
+    width: 220px; 
+    border-radius: 6px;
+    overflow: hidden; 
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+}
+.card-foto {
+    width: 100%; 
+    height: 200%; 
+    overflow: hidden;
+    background-color: transparent;
+}
+.card-foto img {
+    width: 100%; 
+    height: 100%; 
+    border-radius: 6px;
+    object-fit: cover; 
+}
+.card-legenda-vet {
+    width: 100%; 
+    background-color:#f1f1f1; 
+    color: #333; 
+    padding: 15px;
+    text-align: center; 
+    background-color: transparent;
+    
+}
+.card-legenda h3 {
+    margin: 0;
+    background-color: transparent;
+    color: #333;
+    size: 1.2rem;
+}
+.card-legenda h4 {
+    margin: 5px;
+    font-size: 1rem;
+    background-color: transparent;
+    color: #dddddd;
+}
+.card-social {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    background-color: #f1f1f1;
+}
+.card-social img {
+    width: 24px; 
+    height: 24px;
+    object-fit: contain;
+    cursor: pointer;
+    transition: transform 0.3s ease; 
+}
+.card-social img:hover {
+    transform: scale(1.1); 
+}
+
+/*-------------------------------------------------------*/
+/* 5º - Feedback */
+.feedback {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; 
+    background-color: #ffc800;
+    padding: 0 20px; 
+}
+
+.animais {
+    display: flex; 
+    flex-direction: row; 
+    justify-content: center; 
+    align-items: center; 
+    gap: 30px; 
+    max-width: 1200px; 
+    width: 100%;
+}
+
+.gato-cao {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    flex: 1; 
+}
+
+.imagem-gato, .imagem-cao {
+    max-width: 240px;
+    height: auto;
+}
+
+.formulario-feedback {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center;
+    gap: 20px;
+    flex: 2; /* O formulário ocupa 2 partes do espaço */
+    background-color: #333;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /*Sombra*/
+}
+
+.formulario-feedback form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    text-decoration: none;
+    color: #f1f1f1;
+}
+.formulario-feedback p {
+    font-size: 1.3rem; /*Conforme Solicitado*/
+    color: #fff;
+}
+.formulario-feedback input {
+    padding: 10px;
+    font-size: 1.3rem;
+    border-radius: 6px;
+    border: 1px solid #ccc; /*Borda de Campo de entrada #ccc (Como solicitado)*/
+    width: 100%;
+    color: #fff;
+    background-color: #444; /*Cor do texto no formulário de feedback - #444 (Como solicitado)*/
+}
+.formulario-feedback textarea {
+    padding: 10px;
+    font-size: 1.3rem; /*Conforme Solicitado*/
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    width: 100%;
+    height: 100px; 
+    color: #fff;
+    background-color: #444; /*Cor do texto no formulário de feedback - #444 (Como solicitado)*/
+    resize: vertical; 
+}
+.formulario-feedback button {
+    padding: 10px;
+    font-size: 1rem;
+    background-color: #ffc800;
+    border: none;
+    color: #000; /*Conforme solicitado*/
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+.formulario-feedback button:hover {
+    background-color:#c59b01 ;
+}
+/*-------------------------------------------------------*/
+/* 6º - Rodapé */
+.rodape {
+    background-color: #333;  
+    color: #ccc;  
+    text-align: center;  
+    padding: 7px;  
+    position: relative;
+    bottom: 0;
+    width: 100%;  
+    font-size: 0.7rem;
+}
+
+.rodape p {
+    margin: 0;  
+}
+/*tablets e celuláres grandes - aula 6*/
+@media (max-width: 768px) {
+    .menu ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .secao2 {
+        grid-template-columns: 1fr;
+    }
+
+    .cards-tratamento,
+    .cards-veterinarios {
+        flex-direction: column;
+    }
+
+    .formulario-feedback {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .formulario-feedback input,
+    .formulario-feedback textarea,
+    .formulario-feedback button {
+        font-size: 0.9rem;
+    }
+}
+
+/*Notebooks e computadores pequenos - aula 6*/
+@media (min-width: 1024px) {
+    .secao2 {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .cards-veterinarios {
+        gap: 30px;
+    }
+}
